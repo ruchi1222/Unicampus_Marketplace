@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login </title>
+  <link rel="stylesheet" href="csstrial.css">
+  <link rel="stylesheet" href="signup.css">
+
+</head>
+<body>
+
+<!-- Navigation Bar START -->
+  <header class="header-section">
+    <div class="container nav-bar">
+      <div class="logo">
+        <img src="image-removebg-preview (9).png" alt="UniMart Logo" width="300" >
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+          <input type="text" placeholder="Search...">
+      </div>  
+      <div class="profile">
+          <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
+      </div>
+      <div class="cart">
+          <a href="#"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+      </div>
+    </div>
+  </header>
+  <!-- Navigation Bar END -->
+
+<h2 align="center" style="color: #fc0362;"> Login </h2>
+
+  <!--Login Form Starts-->
+  <form action="#" method="post">
+
+  <table id=table2 style="margin: 0 auto; text-align:center;">
+  <tr>
+      <td><label for="name">Name:</label></td>
+      <td><input type="text" id="name" name="name" minlength="6" maxlength="15" required placeholder="Enter your name"></td>
+    </tr>
+
+  <tr>
+      <td><label for="password">Password:</label></td>
+      <td><input type="password" id="password" name="password" minlength="8" maxlength="20" required placeholder="Enter your password"></td>
+    </tr>
+
+ <tr>
+      <td><label for="confirm-password">Confirm Password:</label></td>
+      <td><input type="password" id="confirm-password" name="confirm-password" minlength="8" maxlength="20" required placeholder="Confirm your password"></td>
+    </tr>
+
+</table>
+<p style="text-align:center;">
+    <input type="submit" value="Login" style="margin-right: 10px;">
+    <input type="reset" value="Clear">
+</p>
+</form>
+<p align="center" style="color: #fc0362;"> Don't have an account? <a href="signup.html"> Sign up! </a></p>
+
+</body>
