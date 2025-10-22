@@ -1,0 +1,22 @@
+#table1 {
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fc0362;
+    padding: 5px;
+    width: 500px; 
+    border-spacing: 0 5px;
+}
+
+td {
+    padding: 5px 10px;
+    height: 40px;
+}
+
+#table2{
+margin: 0 auto;
+border-style: solid;
+border-width: 2px;
+border-color: #fc0362;
+padding: 5px;
+}
