@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Sign Up</title>
+  <link rel="stylesheet" href="csstrial.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<!-- Navigation Bar START -->
+  <header class="header-section">
+    <div class="container nav-bar">
+      <div class="logo">
+        <img src="image-removebg-preview (9).png" alt="UniMart Logo" width="300" >
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+          <input type="text" placeholder="Search...">
+      </div>  
+      <div class="profile">
+          <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
+      </div>
+      <div class="cart">
+          <a href="#"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+      </div>
+    </div>
+  </header>
+  <!-- Navigation Bar END -->
+
+  <h2 align="center" style="color: #fc0362;">Sign Up</h2>
+
+  <!--Sign up Form Starts-->
+  <form action="#" method="post">
+
+  <table id="table1">
+
+  <tr>
+      <td><label for="name"> Name:</label></td>
+      <td><input type="text" id="name" name="name" minlength="6" maxlength="15" placeholder="Enter your name"></td>
+    </tr>
+
+  <tr>
+      <td><label for="password">Password:</label></td>
+      <td><input type="password" id="password" name="password" minlength="8" maxlength="20" required placeholder="Enter your password"></td>
+    </tr>
+
+  <tr>
+      <td><label for="confirm-password">Confirm Password:</label></td>
+      <td><input type="password" id="confirm-password" name="confirm-password" minlength="8" maxlength="20" required placeholder="Confirm your password"></td>
+    </tr>
+  
+  <tr>
+      <td><label for="studentid">Student ID:</label></td>
+      <td><input type="text" id="studentid" name="studentid" maxlength="7" placeholder="Enter your StudentID"></td>
+    </tr>
+
+    <tr>
+      <td><label for="email">Email:</label></td>
+      <td><input type="email" id="email" name="email" maxlength="50" placeholder="Enter your umail"></td>
+    </tr>
+
+    <tr>
+      <td><label for="phone">Phone Number:</label></td>
+      <td><input type="tel" id="phone" name="phone" maxlength="8" placeholder="00000000"></td>
+    </tr>
+
+    <tr>
+      <td>Role:</td>
+      <td>
+        <label for="buyer"><input type="radio" id="buyer" name="role" value="buyer"> Buyer</label>
+        <label for="seller"><input type="radio" id="seller" name="role" value="seller"> Seller</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <input type="submit" value="Sign Up">
+        <input type="reset" value="Clear">
+      </td>
+    </tr>
+
+  </table>
+  </form>
+  <p align="center" style="color: #fc0362;"> Already have an account? <a href="login.html"> Login! </a></p>
+
+  </body>
