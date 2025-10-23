@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-section">
+        <div class="container nav-bar">
+            <div class="logo">
+                <img src="image-removebg-preview (9).png" alt="UniMart Logo" width="300" >
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="category.html">Category</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+              <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>  
+            <div class="profile">
+                <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
+            </div>
+              <div class="cart">
+                <a href="add.php"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+                <span><?php echo $unpaidCount;?></span>
+            </div>
+        </div>
+
+        <div class="container main-content">
+            <div class="main-text">
+                <h1>Sell</h1>
+                <h1>Buy</h1>
+                <h1>Connect</h1>
+                <a href="category.html" class="btn-explore">Explore</a>
+            </div>
+            <div class="main-image">
+                <img src="image-removebg-preview (11).png" alt="Shopping Illustration" >
+            </div>
+    </header>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 UniMart. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

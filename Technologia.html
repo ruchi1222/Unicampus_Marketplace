@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Technical Gadget</title>
   <link rel="stylesheet" href="csstrial.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
@@ -17,7 +18,7 @@
       <nav class="main-menu">
         <ul>
           <li><a href="HomePage.html">Home</a></li>
-          <li><a href="#">Category</a></li>
+          <li><a href="category.html">Category</a></li>
           <li><a href="About.html">About</a></li>
         </ul>
       </nav>
@@ -28,7 +29,7 @@
           <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
       </div>
       <div class="cart">
-          <a href="#"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+          <a href="cart.html"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
       </div>
     </div>
   </header>
@@ -36,7 +37,7 @@
 
 <!-- Technical gadget grids and gadgets -->
   <section class="categories">
-    <h2>Technical Gadgets</h2>
+    <h1>Technical Gadgets</h1>
     <hr class="title-line">
     <div class="category-grid">
 
@@ -44,60 +45,65 @@
         <h3>Headphone</h3>
         <img src="headphone.jpeg" alt="headphone" >
         <p class="price">Rs 200</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
+       <button class="btn" onclick="addToCart('headphone', 200)">Add to Cart</button>
       </div>
 
       <div class="category-box">
         <h3>Earphone</h3>
         <img src="earphone.jpeg" alt="earphone">
         <p class="price">Rs 250</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>  
+        <button class="btn" onclick="addToCart('earphone', 250)">Add to Cart</button> 
       </div>
 
       <div class="category-box">
         <h3>Mouse</h3>
         <img src="mouse.jpeg" alt="mouse">
         <p class="price">Rs 150</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
+        <button class="btn" onclick="addToCart('mouse', 150)">Add to Cart</button>
       </div>
 
       <div class="category-box">
         <h3>USB drives</h3>
         <img src="usb.jpeg" alt="usb">
         <p class="price">Rs 350</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
+       <button class="btn" onclick="addToCart('usb', 350)">Add to Cart</button>
       </div>
 
       <div class="category-box">
         <h3>Laptop bag</h3>
         <img src="bag.jpeg" alt="laptopbag">
         <p class="price">Rs 350</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
+       <button class="btn" onclick="addToCart('laptopbag', 350)">Add to Cart</button>
       </div>
 
       <div class="category-box">
         <h3>Powerbank</h3>
         <img src="powerbank.jpeg" alt="powerbank">
         <p class="price">Rs 450</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
+        <button class="btn" onclick="addToCart('powerbank', 450)">Add to Cart</button>
       </div>
 
       <div class="category-box">
         <h3>Portable Fans</h3>
         <img src="fan.jpeg" alt="portablefans">
         <p class="price">Rs 450</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
+        <button class="btn" onclick="addToCart('portablefans', 450)">Add to Cart</button>
       </div>
 
       <div class="category-box">
         <h3>LED Desk Lamp</h3>
         <img src="ledlamp.jpeg" alt="lamp">
         <p class="price">Rs 1125</p>
-        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
+        <button class="btn" onclick="addToCart('lamp', 1125)">Add to Cart</button>
       </div>
     </div>
 
   </section>
-
+  <footer>
+      <div class="footer-content">
+          <p>&copy; 2025 UniMart. All rights reserved.</p>
+      </div>
+    </footer>
+   <script src="addtocart.js"></script>
 </body>
 </html>
