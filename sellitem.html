@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Item</title>
+  <link rel="stylesheet" href="csstrial.css">
+</head>
+<body>
+
+<!-- Navigation Bar START -->
+  <header class="header-section">
+    <div class="container nav-bar">
+      <div class="logo">
+        <img src="image-removebg-preview (9).png" alt="UniMart Logo" width="300" >
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+          <input type="text" placeholder="Search...">
+      </div>  
+      <div class="profile">
+          <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
+      </div>
+      <div class="cart">
+          <a href="#"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+      </div>
+    </div>
+  </header>
+  <!-- Navigation Bar END -->
+
+<!-- Item To Be Sold By Student -->
+  <section class="uni-form">
+    <h2>Sell Your Item</h2>
+    <p>Fill out the form below to sell your product on UniMart.</p>
+
+    <form>
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your university email" required><br><br>
+
+      <label for="item">Item Name:</label><br>
+      <input type="text" id="item" name="item" placeholder="e.g. Headphones, Textbook" required><br><br>
+
+      <label for="category">Category:</label><br>
+      <select id="category" name="category" required>
+        <option value="">Select a category</option>
+        <option value="book">Book</option><br>
+        <option value="stationery">Stationery</option><br>
+        <option value="technical gadget">Technical Gadget</option><br><br>
+      </select><br><br>
+
+      <label for="price">Price (Rs):</label><br>
+      <input type="number" id="price" name="price" placeholder="Enter price" required><br><br>
+
+      <label for="desc">Description:</label><br>
+      <textarea id="desc" name="desc" rows="2" placeholder="Write a brief description about your item" required></textarea><br><br>
+
+      <label for="image">Upload Image:</label><br>
+      <input type="file" id="image" name="image" accept="image/*" required><br>
+
+      <button type="submit" class="btn">Submit Item</button>
+    </form>
+  </section>
+</body>
+</html>
+
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); 
+
+    // Get input values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const item = document.getElementById("item").value.trim();
+    const price = document.getElementById("price").value;
+
+    // Name Check
+    const namePattern = /^[A-Za-z ]{5,}$/;
+    if (!namePattern.test(name)) {
+      alert("Oops! Please enter your name (at least 2 letters).");
+      return;
+    }
+
+    // Validating Email
+    const emailCheck = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailCheck.test(email)) {
+      alert("Hmm… that doesn’t look like a proper email!");
+      return;
+    }
+
+    // Check Item
+    if (item.length <= 2) {
+      alert("Please enter a proper item name (at least 2 characters).");
+      return;
+    }
+
+    // Validate Price
+    if (price === "" || price <= 0) {
+      alert("Please type a price bigger than 0.");
+      return;
+    }
+
+    alert("Yay! Your item was submitted successfully 🎉");
+
+    form.reset();
+  });
+</script>
+

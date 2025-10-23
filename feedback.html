@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Feedback </title>
+  <link rel="stylesheet" href="csstrial.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<!-- Navigation Bar START -->
+  <header class="header-section">
+    <div class="container nav-bar">
+      <div class="logo">
+        <img src="image-removebg-preview (9).png" alt="UniMart Logo" width="300" >
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+          <input type="text" placeholder="Search...">
+      </div>  
+      <div class="profile">
+          <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
+      </div>
+      <div class="cart">
+          <a href="#"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+      </div>
+    </div>
+  </header>
+  <!-- Navigation Bar END -->
+
+  <h2 align="center" style="color: #fc0362;"> Feedback </h2>
+
+  <!--Login Form Starts-->
+  <form action="#" method="post">
+  <table id="table3">
+  <tr>
+      <td><label for="Your name"> Name:</label></td>
+      <td><input type="text" id="name" name="name" minlength="2" maxlength="20" placeholder="Enter your name"></td>
+    </tr>
+
+  <tr>
+      <td><label for="email">Email:</label></td>
+      <td><input type="email" id="email" name="email" maxlength="50" placeholder="Enter your umail"></td>
+  </tr>
+
+  <tr>
+    <td><label for="experience">Rate your experience:</label></td>
+    <td>
+        <select id="experience" name="experience" required>
+        <option value="" disabled selected hidden>Select a rating</option>
+        <option value="low">Low</option>
+        <option value="average">Average</option>
+        <option value="good">Good</option>
+        <option value="excellent">Excellent</option>
+        </select>
+    </td>
+  </tr>
+
+  <tr>
+    <td><label for="feedback"> Feedback:</label></td>
+    <td><input type="text" id="feedback" name="feedback" minlength="2" maxlength="50" required placeholder="Suggest your feedback here"></td>
+  </tr>
+  </table>
+  <p style="text-align:center;">
+    <input type="submit" value="Feedback" style="margin-right: 10px;">
+    <input type="reset" value="Clear">
+</p>
+</form>
+</body>
+</html>
+
+
+
+  
