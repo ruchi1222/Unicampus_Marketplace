@@ -10,49 +10,40 @@ body {
 
 /* header section background */
 .header-section {
-      background-color:#D56989;
-    color: black;
-    padding-bottom: 50px; 
+    background-color:#D56989;
 }
 
 /* navbar layout */
 .nav-bar {
     display: flex;
-    justify-content: start;
-    align-items: left;
-    padding: 20px 20px;
-    width: 100%;
-    height: 150px;
-    background-color:#f3eef1;
-    box-shadow: #000000;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:white;
 }
 
 .logo img {
-    font-size: 24px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    padding: 0;
+    width: 150px;
+    height: auto;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
+
 /* main menu styling */
 .main-menu ul {
     list-style: none;
-    padding: 0;
-    margin-top: 50px;
-    margin-left: 900px;
     display: flex;
-    gap: 160px;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
 }
 
-
 .main-menu li a {
-    padding: 10px 15px;
-    font-size: 40px;
+    padding: 20px;
+    font-size: 20px;
+    color: black;
     transition: color 0.3s;
+    text-decoration: none;
 }
 
 .main-menu li a:hover {
@@ -62,15 +53,12 @@ a {
 /* search box */
 .search-box {
   background: #ea9caf;
-  width:350px;
-  height: 50px;
-  display: flex;
-  justify-content:space-between;
-  padding:0px 15px; 
+  width:200px;
+  height: 40px;
   border-radius: 40px;
-  margin-top: 50px;
-  margin-left: 1000px;
+  display: flex;
   align-items: center;
+  padding:0 10px;
 }
 
 .search-box input {
@@ -78,16 +66,15 @@ a {
     border:none;
     outline: none;
     background: none;
-    font-size: 30px;
+    font-size: 16px;
 }
 
-.profile{
-    margin-top:30px;
-    margin-left: 55px;
+/* profile & cart icons */
+.profile img, .cart img {
+    width: 50px;
+    height:auto;
 }
-.cart{
-    margin-top:35px;
-}
+
 /* ---------- CATEGORY SECTION TITLE ---------- */
 .categories h2 {
   left: 50%;
@@ -110,8 +97,8 @@ a {
 /* ---------- GRID LAYOUT FOR CATEGORIES ---------- */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1000px,3fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 /* ---------- CATEGORY BOX STYLE ---------- */
@@ -119,15 +106,14 @@ a {
   text-align: center;
   border-radius: 12px;
   overflow: hidden;
-  font-size: 35px;
   background-color: white;
   transition: transform 0.3s;
 }
 
 /* ---------- CATEGORY IMAGE ---------- */
 .category-box img {
-  width: 500px;
-  height: auto;
+  width: 100%;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -155,7 +141,6 @@ a {
 .btn {
   background-color: #fc8095; 
   padding: 8px 16px;
-  font-size: 35px;
   border: none;
   margin-bottom: 16px;
   border-radius: 5px;
@@ -170,10 +155,54 @@ a {
   color: black;
   text-decoration: none;
 }
-.tr,td{
-  font-size: 30px;
+
+
+/* SELL FORM STYLING */
+.uni-form {
+  background-color: white;
+  width: 25%;
+  margin: 20px auto;
+  padding: 32px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #d56989(195, 181, 27, 0.1);
 }
-.table1{
-  margin-left: 50px;
-  margin-top: 50px;
+
+.uni-form h2 {
+  color: #d56989;
+  text-align: center;
+}
+
+.uni-form p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.uni-form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.uni-form input,
+.uni-form select,
+.uni-form textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.uni-form input[type="file"] {
+  border: none;
+}
+
+.uni-form .btn {
+  display: block;
+  margin: 16px auto 0;
+  background-color: #fc8095;
+  color: black;
+  padding: 10px 20px;
+}
+
+.uni-form .btn:hover {
+  background-color: #ffc9d7;
 }
