@@ -7,13 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header-section">
-        <div class="container nav-bar">
-            <div class="logo">
-                <img src="image-removebg-preview (9).png" alt="UniMart Logo" width="300" >
-            </div>
-        </div>
+     <div class="container nav-bar">
+      <div class="logo">
+        <img src="image-removebg-preview (9).png" alt="UniMart Logo" width="300" >
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="HomePage.html">Home</a></li>
+          <li><a href="category.html">Category</a></li>
+          <li><a href="About.html">About</a></li>
+        </ul>
+      </nav>   
+          <div class="search-box">
+                 <input type="text" id="search" placeholder="Search...">
+              </div>
+            <div class="results" id="results"></div>
+ 
+      <div class="profile">
+          <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
+      </div>
+      <div class="cart">
+          <a href="cart.html"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+      </div>
+    </div>
         <div class="container profile-content">
             <h1>My Profile</h1>
             <div class="profile-icon">
@@ -27,5 +44,7 @@
             <p>&copy; 2025 UniMart. All rights reserved.</p>
         </div>
     </footer>
+    <script src="addtocart.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

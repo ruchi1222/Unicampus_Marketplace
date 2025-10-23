@@ -1,5 +1,3 @@
-// addtocart.js
-
 // Get the cart from localStorage or start a new one
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -43,9 +41,8 @@ function displayCart() {
   totalPrice.textContent = "Total: Rs " + grandTotal;
 }
 
-// Remove a single item by index
 function removeFromCart(index) {
-  cart.splice(index, 1); // Remove item from array
+  cart.splice(index, 1); 
   localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
   displayCart(); // Refresh table
 }

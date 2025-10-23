@@ -20,9 +20,11 @@
           <li><a href="About.html">About</a></li>
         </ul>
       </nav>
-      <div class="search-box">
-          <input type="text" placeholder="Search...">
-      </div>  
+              <div class="search-box">
+                 <input type="text" id="search" placeholder="Search...">
+              </div>
+            <div class="results" id="results"></div>
+
       <div class="profile">
           <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
       </div>
@@ -30,9 +32,6 @@
           <a href="cart.html"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
       </div>
     </div>
-        <div class="container cart-content">
-            <h2>Your Shopping Cart</h2>
-
 <section class="cart-section">
   <h2 class="cart-title">🛒 Your Cart</h2>
 
@@ -61,6 +60,7 @@
         </div>
     </footer>
     <script src="addtocart.js"></script>
+    <script src="search.js"></script>
   <script>
     // Display the cart items when this page loads
     displayCart();

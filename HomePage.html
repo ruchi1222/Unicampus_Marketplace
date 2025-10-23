@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="csstrial.css">
 </head>
 <body>
 
@@ -21,14 +22,15 @@
                 </ul>
             </nav>
               <div class="search-box">
-                <input type="text" placeholder="Search...">
-            </div>  
+                 <input type="text" id="search" placeholder="Search...">
+              </div>
+            <div class="results" id="results"></div>
+
             <div class="profile">
                 <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
             </div>
               <div class="cart">
-                <a href="add.php"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
-                <span><?php echo $unpaidCount;?></span>
+                <a href="cart.html"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
             </div>
         </div>
 
@@ -43,10 +45,77 @@
                 <img src="image-removebg-preview (11).png" alt="Shopping Illustration" >
             </div>
     </header>
+    <section class="categories">
+    <hr class="title-line">
+    <div class="category-grid">
+
+      <div class="category-box">
+        <h3>Happy After All</h3>
+        <img src="happy.jpeg" alt="book1">
+        <p class="desc"> Self-help & Healing Book</p>
+        <p class="price">Rs 200</p>
+        <button class="btn" onclick="addToCart('Happy After All', 200)">Add to Cart</button>
+      </div>
+
+     <div class="category-box">
+        <h3>Headphone</h3>
+        <img src="headphone.jpeg" alt="headphone" >
+        <p class="price">Rs 200</p>
+       <button class="btn" onclick="addToCart('headphone', 200)">Add to Cart</button>
+      </div>
+
+       <div class="category-box">
+        <h3>Pencil</h3>
+        <img src="pencil.jpeg" alt="Pencil">
+        <p class="price">Rs 15</p>
+        <button class="btn" onclick="addToCart('Pencil', 15)">Add to Cart</button>
+      </div>
+
+      <div class="category-box">
+        <h3>Vogue</h3>
+        <img src="vogue.jpeg" alt="book4">
+        <p class="desc"> Fashion & Celebrity Trends Magazine</p>
+        <p class="price">Rs 350</p>
+        <button class="btn" onclick="addToCart('Vogue', 350)">Add to Cart</button>
+      </div>
+
+     <div class="category-box">
+        <h3>USB drives</h3>
+        <img src="usb.jpeg" alt="usb">
+        <p class="price">Rs 350</p>
+       <button class="btn" onclick="addToCart('usb', 350)">Add to Cart</button>
+      </div>
+
+     <div class="category-box">
+        <h3>Scissor</h3>
+        <img src="Scissor.jpeg" alt="Scissor">
+        <p class="price">Rs 50</p>
+        <button class="btn" onclick="addToCart('Scissor', 50)">Add to Cart</button>
+      </div>
+
+      <div class="category-box">
+        <h3>Ensemble,C'est Tout</h3>
+        <img src="ensemble.jpeg" alt="book7">
+        <p class="desc"> Romance & Drame </p>
+        <p class="price">Rs 450</p>
+        <button class="btn" onclick="addToCart('Ensemble,Cest Tout', 450)">Add to Cart</button>
+      </div>
+
+      <div class="category-box">
+        <h3>Powerbank</h3>
+        <img src="powerbank.jpeg" alt="powerbank">
+        <p class="price">Rs 450</p>
+        <button class="btn" onclick="addToCart('powerbank', 450)">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
     <footer>
         <div class="footer-content">
             <p>&copy; 2025 UniMart. All rights reserved.</p>
         </div>
     </footer>
+    <script src="addtocart.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
