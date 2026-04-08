@@ -1,110 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unimart Payment</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Unimart Checkout</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
+            background-color: #f2dede;
+        }
+
+        .payment-header {
+            text-align: center;
+            color: #fc0362;
+            font-size: 50px;
+            margin: 40px 0 20px;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffe9ef;
-        }
-        /* Header with logo */
-        .header-section {
-            background-color: #ea9caf; /* UniMart brand color */
-            padding: 20px;
-            text-align: center;
-        }
-        .header-section img {
-            max-width: 300px;
-            height: auto;
-        }
-        /* Form container */
-        .form-container {
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
             font-weight: bold;
         }
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto 50px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #D56989;
         }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        select,
         button {
-            background-color: #28a745;
-            color: white;
-            border: none;
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
         }
-        button:hover {
-            background-color: #218838;
+
+        .pay-btn {
+            background-color: #fc0362;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .pay-btn:hover {
+            background-color: #d90454;
+        }
+
+        .cancel-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #fc0362;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cancel-link:hover {
+            text-decoration: underline;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 2px solid #fc0362;
+        }
+
+        .modal-box h2 {
+            color: #fc0362;
+            margin-top: 0;
+        }
+
+        .receipt-list {
+            text-align: left;
+            background: #fdfdfd;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .receipt-list p {
+            margin: 5px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .receipt-list p:last-child {
+            border-bottom: none;
+        }
+
+        .card-details {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #fdf8fa;
+            border-left: 4px solid #fc0362;
+            border-radius: 5px;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Logo header START -->
-    <header class="header-section">
-        <img src="image-removebg-preview (9).png" alt="UniMart Logo">
-    </header>
-    <!-- Logo header END -->
+    <h1 class="payment-header">Checkout</h1>
 
     <!-- Payment Form -->
     <div class="form-container">
-        <h2>Unimart Payment Form</h2>
-        <form id="paymentForm" action="#" method="post">
+        <form id="paymentForm">
 
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
             </div>
 
             <div class="form-group">
-                <label for="item">Item:</label>
-                <input type="text" id="item" name="item" required placeholder="Item name">
-            </div>
-
-            <div class="form-group">
-                <label for="price">Price (Rs):</label>
-                <input type="number" id="price" name="price" min="0.01" step="0.01" required placeholder="0.00">
+                <label for="address">Shipping Address:</label>
+                <input type="text" id="address" name="address" required placeholder="Enter delivery location">
             </div>
 
             <div class="form-group">
                 <label for="paymentMethod">Payment Method:</label>
-                <select id="paymentMethod" name="paymentMethod" required>
-                    <option value="" disabled selected hidden>Select payment method</option>
+                <select id="paymentMethod" name="paymentMethod" required onchange="toggleCardDetails()">
+                    <option value="" disabled selected hidden>Select payment method...</option>
                     <option value="card">Credit/Debit Card</option>
                     <option value="paypal">PayPal</option>
                     <option value="cash">Cash on Delivery</option>
                 </select>
             </div>
 
-            <button type="submit">Purchase</button>
+            <div class="card-details" id="cardDetails">
+                <div class="form-group">
+                    <label>Card Number:</label>
+                    <input type="text" placeholder="1234 5678 9101 1121" maxlength="19">
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <div class="form-group" style="flex:1;">
+                        <label>Expiry Date:</label>
+                        <input type="text" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group" style="flex:1;">
+                        <label>CVV:</label>
+                        <input type="text" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="pay-btn" onclick="processOrder()">Place Order</button>
+            <a href="cart.php" class="cancel-link">Back to Cart</a>
         </form>
     </div>
 
-    <script src="payment.js"></script>
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-box">
+            <h2>🎉 Payment Successful!</h2>
+            <p>Your order has been placed. Here is your receipt:</p>
+            <div class="receipt-list" id="receiptContent">
+                <!-- Javascript will inject items here -->
+            </div>
+            <h3 id="modalTotal" style="color: #333; margin-bottom:20px;"></h3>
+            <button class="pay-btn" onclick="closeAndReturn()">Close</button>
+        </div>
+    </div>
+
+    <script src="addtocart.js"></script>
+    <script>
+        function toggleCardDetails() {
+            var method = document.getElementById("paymentMethod").value;
+            var details = document.getElementById("cardDetails");
+            if (method === "card") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+
+        function processOrder() {
+            // Check required fields based on generic validation
+            var name = document.getElementById("name").value.trim();
+            var address = document.getElementById("address").value.trim();
+            var method = document.getElementById("paymentMethod").value;
+
+            if (!name || !address || !method) {
+                alert("Please fill in your name, address, and select a payment method.");
+                return;
+            }
+
+            // Retrieve cart
+            let currentCart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (currentCart.length === 0) {
+                alert("Your cart is empty! Cannot checkout.");
+                return;
+            }
+
+            var receiptHTML = "";
+            var grandTotal = 0;
+
+            currentCart.forEach(item => {
+                receiptHTML += `<p><strong>${item.quantity}x</strong> ${item.name} - Rs ${item.total}</p>`;
+                grandTotal += item.total;
+            });
+
+            document.getElementById("receiptContent").innerHTML = receiptHTML;
+            document.getElementById("modalTotal").textContent = "Total Paid: Rs " + grandTotal;
+
+            // Show modal
+            document.getElementById("successModal").style.display = "flex";
+        }
+
+        function closeAndReturn() {
+            clearCart();
+            window.location.href = "home.php";
+        }
+    </script>
 </body>
+
 </html>
-
-
