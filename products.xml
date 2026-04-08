@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="products.xsl"?>
+<unimart xmlns="http://unimart.com/products"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://unimart.com/products products.xsd">
+
+    <product category="books">
+        <id>B001</id>
+        <name>Happy After All</name>
+        <image>happy.jpeg</image>
+        <description>Self-help &amp; Healing Book</description>
+        <price>200</price>
+    </product>
+
+    <product category="books">
+        <id>B002</id>
+        <name>National Geographic</name>
+        <image>national.jpeg</image>
+        <description>Science Magazine</description>
+        <price>250</price>
+    </product>
+
+    <product category="books">
+        <id>B003</id>
+        <name>Reader's Digest</name>
+        <image>reader.jpeg</image>
+        <description>Lifestyle Magazine</description>
+        <price>150</price>
+    </product>
+
+    <product category="books">
+        <id>B004</id>
+        <name>Vogue</name>
+        <image>vogue.jpeg</image>
+        <description>Fashion Magazine</description>
+        <price>350</price>
+    </product>
+
+    <product category="books">
+        <id>B005</id>
+        <name>Pride And Prejudice</name>
+        <image>pride.jpeg</image>
+        <description>Classic Literature</description>
+        <price>350</price>
+    </product>
+
+    <product category="stationaries">
+        <id>S001</id>
+        <name>Black Pen</name>
+        <image>blackpen.jpeg</image>
+        <description>Black ink pen</description>
+        <price>20</price>
+    </product>
+
+    <product category="stationaries">
+        <id>S002</id>
+        <name>Blue Pen</name>
+        <image>bluepen.jpeg</image>
+        <description>Blue ink pen</description>
+        <price>20</price>
+    </product>
+
+    <product category="stationaries">
+        <id>S003</id>
+        <name>Pencil</name>
+        <image>pencil.jpeg</image>
+        <description>HB Pencil</description>
+        <price>15</price>
+    </product>
+
+    <product category="stationaries">
+        <id>S004</id>
+        <name>Eraser</name>
+        <image>eraser.jpeg</image>
+        <description>Soft Eraser</description>
+        <price>30</price>
+    </product>
+
+    <product category="stationaries">
+        <id>S005</id>
+        <name>Ruler</name>
+        <image>ruler.jpeg</image>
+        <description>30cm Ruler</description>
+        <price>35</price>
+    </product>
+
+    <product category="tech">
+        <id>T001</id>
+        <name>Headphone</name>
+        <image>headphone.jpeg</image>
+        <description>Wired Headphones</description>
+        <price>200</price>
+    </product>
+
+    <product category="tech">
+        <id>T002</id>
+        <name>Earphone</name>
+        <image>earphone.jpeg</image>
+        <description>In-ear Buds</description>
+        <price>250</price>
+    </product>
+
+    <product category="tech">
+        <id>T003</id>
+        <name>Mouse</name>
+        <image>mouse.jpeg</image>
+        <description>Optical Mouse</description>
+        <price>150</price>
+    </product>
+
+    <product category="tech">
+        <id>T004</id>
+        <name>USB Drive</name>
+        <image>usb.jpeg</image>
+        <description>Flash Drive</description>
+        <price>350</price>
+    </product>
+
+    <product category="tech">
+        <id>T005</id>
+        <name>Laptop Bag</name>
+        <image>bag.jpeg</image>
+        <description>Laptop Sleeve</description>
+        <price>350</price>
+    </product>
+
+</unimart>
