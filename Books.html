@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book</title>
   <link rel="stylesheet" href="csstrial.css">
-   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -18,28 +17,30 @@
       <nav class="main-menu">
         <ul>
           <li><a href="HomePage.html">Home</a></li>
-          <li><a href="category.html">Category</a></li>
+          <li><a href="#">Category</a></li>
           <li><a href="About.html">About</a></li>
         </ul>
       </nav>
-            <div class="search-box">
-                 <input type="text" id="search" placeholder="Search...">
-            </div>
-            <div class="results" id="results"></div>
-
+      <div class="search-box">
+          <input type="text" placeholder="Search...">
+          <div id="results" class="results-dropdown"></div>
+      </div>  
       <div class="profile">
           <a href="profile.html"><img src="image-removebg-preview (6).png" alt="profile" width="100px"></a>
       </div>
       <div class="cart">
-          <a href="cart.html"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
+          <a href="#"><img src="image-removebg-preview (7).png" alt="profile" width="100px"></a>
       </div>
     </div>
   </header>
   <!-- Navigation Bar END -->
    
+
+
+  
   <!-- Book grids and books -->
   <section class="categories">
-    <h1>Books</h1>
+    <h2>Books</h2>
     <hr class="title-line">
     <div class="category-grid">
 
@@ -48,7 +49,7 @@
         <img src="happy.jpeg" alt="book1">
         <p class="desc"> Self-help & Healing Book</p>
         <p class="price">Rs 200</p>
-        <button class="btn" onclick="addToCart('Happy After All', 200)">Add to Cart</button>
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
       </div>
 
       <div class="category-box">
@@ -56,7 +57,7 @@
         <img src="national.jpeg" alt="book2">
         <p class="desc"> Educational Science & Exploration Book</p>
         <p class="price">Rs 250</p>
-        <button class="btn" onclick="addToCart('National Geographic', 250)">Add to Cart</button>  
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>  
       </div>
 
       <div class="category-box">
@@ -64,7 +65,7 @@
         <img src="reader.jpeg" alt="book3">
         <p class="desc"> Lifestyle & Inspirational Stories Magazine</p>
         <p class="price">Rs 150</p>
-        <button class="btn" onclick="addToCart('Readers Digest', 250)">Add to Cart</button>  
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
       </div>
 
       <div class="category-box">
@@ -72,7 +73,7 @@
         <img src="vogue.jpeg" alt="book4">
         <p class="desc"> Fashion & Celebrity Trends Magazine</p>
         <p class="price">Rs 350</p>
-        <button class="btn" onclick="addToCart('Vogue', 350)">Add to Cart</button>
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
       </div>
 
       <div class="category-box">
@@ -80,7 +81,7 @@
         <img src="pride.jpeg" alt="book5">
         <p class="desc"> Classic Literature & Romance Book</p>
         <p class="price">Rs 350</p>
-        <button class="btn" onclick="addToCart('Pride And Prejudice', 350)">Add to Cart</button>
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
       </div>
 
       <div class="category-box">
@@ -88,7 +89,7 @@
         <img src="tintin.jpeg" alt="book6">
         <p class="desc"> Adventure Book</p>
         <p class="price">Rs 450</p>
-        <button class="btn" onclick="addToCart('Les Adventures De Tintin', 450)">Add to Cart</button>
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
       </div>
 
       <div class="category-box">
@@ -96,7 +97,7 @@
         <img src="ensemble.jpeg" alt="book7">
         <p class="desc"> Romance & Drame </p>
         <p class="price">Rs 450</p>
-        <button class="btn" onclick="addToCart('Ensemble,Cest Tout', 450)">Add to Cart</button>
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
       </div>
 
       <div class="category-box">
@@ -104,17 +105,14 @@
         <img src="algorithm.jpeg" alt="book8">
         <p class="desc"> CS & Algorithm Book</p>
         <p class="price">Rs 1125</p>
-        <button class="btn" onclick="addToCart('Introduction To Algorithms', 1125)">Add to Cart</button><button class="btn"><a href= "cart.html">Add To Cart</a></button>
+        <button class="btn"><a href= "cart.html">Add To Cart</a></button>
       </div>
     </div>
 
   </section>
-  <footer>
-      <div class="footer-content">
-          <p>&copy; 2025 UniMart. All rights reserved.</p>
-      </div>
-    </footer>
-    <script src="addtocart.js"></script>
-    <script src="search.js"></script>
+
 </body>
+<script src="search.js"></script>
+<script src="addtocart.js"></script>
 </html>
+

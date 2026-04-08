@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="products.xsl"?>
+<main:unimart 
+    xmlns:main="http://unimart.com/products"
+    xmlns:book="http://unimart.com/books" 
+    xmlns:stn="http://unimart.com/stationaries" 
+    xmlns:tech="http://unimart.com/tech"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://unimart.com/products products.xsd">
+
+    <book:product>
+        <book:id>B001</book:id>
+        <book:name>Happy After All</book:name>
+        <book:image>happy.jpeg</book:image>
+        <book:description>Self-help &amp; Healing Book</book:description>
+        <book:price>200</book:price>
+    </book:product>
+    <book:product>
+        <book:id>B002</book:id>
+        <book:name>National Geographic</book:name>
+        <book:image>national.jpeg</book:image>
+        <book:description>Science Magazine</book:description>
+        <book:price>250</book:price>
+    </book:product>
+    <book:product>
+        <book:id>B003</book:id>
+        <book:name>Reader's Digest</book:name>
+        <book:image>reader.jpeg</book:image>
+        <book:description>Lifestyle Magazine</book:description>
+        <book:price>150</book:price>
+    </book:product>
+    <book:product>
+        <book:id>B004</book:id>
+        <book:name>Vogue</book:name>
+        <book:image>vogue.jpeg</book:image>
+        <book:description>Fashion Magazine</book:description>
+        <book:price>350</book:price>
+    </book:product>
+    <book:product>
+        <book:id>B005</book:id>
+        <book:name>Pride And Prejudice</book:name>
+        <book:image>pride.jpeg</book:image>
+        <book:description>Classic Literature</book:description>
+        <book:price>350</book:price>
+    </book:product>
+
+    <stn:product>
+        <stn:id>S001</stn:id>
+        <stn:name>Black Pen</stn:name>
+        <stn:image>blackpen.jpeg</stn:image>
+        <stn:description>Black ink pen</stn:description>
+        <stn:price>20</stn:price>
+    </stn:product>
+    <stn:product>
+        <stn:id>S002</stn:id>
+        <stn:name>Blue Pen</stn:name>
+        <stn:image>bluepen.jpeg</stn:image>
+        <stn:description>Blue ink pen</stn:description>
+        <stn:price>20</stn:price>
+    </stn:product>
+    <stn:product>
+        <stn:id>S003</stn:id>
+        <stn:name>Pencil</stn:name>
+        <stn:image>pencil.jpeg</stn:image>
+        <stn:description>HB Pencil</stn:description>
+        <stn:price>15</stn:price>
+    </stn:product>
+    <stn:product>
+        <stn:id>S004</stn:id>
+        <stn:name>Eraser</stn:name>
+        <stn:image>eraser.jpeg</stn:image>
+        <stn:description>Soft Eraser</stn:description>
+        <stn:price>30</stn:price>
+    </stn:product>
+    <stn:product>
+        <stn:id>S005</stn:id>
+        <stn:name>Ruler</stn:name>
+        <stn:image>ruler.jpeg</stn:image>
+        <stn:description>30cm Ruler</stn:description>
+        <stn:price>35</stn:price>
+    </stn:product>
+
+    <tech:product>
+        <tech:id>T001</tech:id>
+        <tech:name>Headphone</tech:name>
+        <tech:image>headphone.jpeg</tech:image>
+        <tech:description>Wired Headphones</tech:description>
+        <tech:price>200</tech:price>
+    </tech:product>
+    <tech:product>
+        <tech:id>T002</tech:id>
+        <tech:name>Earphone</tech:name>
+        <tech:image>earphone.jpeg</tech:image>
+        <tech:description>In-ear Buds</tech:description>
+        <tech:price>250</tech:price>
+    </tech:product>
+    <tech:product>
+        <tech:id>T003</tech:id>
+        <tech:name>Mouse</tech:name>
+        <tech:image>mouse.jpeg</tech:image>
+        <tech:description>Optical Mouse</tech:description>
+        <tech:price>150</tech:price>
+    </tech:product>
+    <tech:product>
+        <tech:id>T004</tech:id>
+        <tech:name>USB Drive</tech:name>
+        <tech:image>usb.jpeg</tech:image>
+        <tech:description>Flash Drive</tech:description>
+        <tech:price>350</tech:price>
+    </tech:product>
+    <tech:product>
+        <tech:id>T005</tech:id>
+        <tech:name>Laptop Bag</tech:name>
+        <tech:image>bag.jpeg</tech:image>
+        <tech:description>Laptop Sleeve</tech:description>
+        <tech:price>350</tech:price>
+    </tech:product>
+</main:unimart>
